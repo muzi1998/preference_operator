@@ -68,7 +68,7 @@ def train(args):
     # GPU / CPU
     device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
     #load preference
-    with open(r"./datasets/software/software_interaction_dict.pickle", 'rb') as file:
+    with open("./datasets/software/software_interaction_dict.pickle", 'rb') as file:
         user_preference = pickle.load(file)
     # load data
     data = DataLoaderKGAT(args, logging)
